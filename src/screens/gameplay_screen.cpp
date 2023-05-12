@@ -20,7 +20,7 @@ GameplayScreen::GameplayScreen()
 
 	player->runAction(Actions::Collection::RepeatInfinite([player] {
 		auto dst_anchor_x = glm::linearRand(0.25f, 0.75f);
-		auto duration = glm::linearRand(0.5f, 1.0f);
+		auto duration = glm::linearRand(0.5f, 2.0f);
 		return Actions::Collection::MakeSequence(
 			Actions::Collection::ChangeHorizontalAnchor(player, dst_anchor_x, duration, Easing::CubicInOut)
 		);
@@ -28,7 +28,7 @@ GameplayScreen::GameplayScreen()
 
 	enemy->runAction(Actions::Collection::RepeatInfinite([enemy] {
 		auto dst_anchor_x = glm::linearRand(0.25f, 0.75f);
-		auto duration = glm::linearRand(0.25f, 1.0f);
+		auto duration = glm::linearRand(0.5f, 2.0f);
 		return Actions::Collection::MakeSequence(
 			Actions::Collection::ChangeHorizontalAnchor(enemy, dst_anchor_x, duration, Easing::CubicInOut)
 		);
